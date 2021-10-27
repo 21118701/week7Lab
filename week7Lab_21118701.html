@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 7 lab</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<form id="form">
+
+			Name:<input id="name" type="text" /><br/>
+
+			Email:<input id="email" type="email" /><br/>
+
+			<input type="submit" onclick="formMethodJS(event)" /><br/>
+
+		</form>
+		<script>
+			function formMethodJS(event){
+				event.preventDefault();
+				var form = document.getElementById("form");
+				form.style.display = "none";
+				var name = document.getElementById("name").value;
+				var email = document.getElementById("email").value;
+				alert(name + ", thank you for your details. We will be in touch via " + email + " shortly");
+			}
+		</script>
+	</body>
+</html>
